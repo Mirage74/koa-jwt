@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "keywords": [],
+  "scripts": {
+    "start": "NODE_PATH=./handlers:./modules node index.js"
+  },
   "author": "Balex <balexvicx@gmail.com>",
   "license": "MIT",
   "dependencies": {
