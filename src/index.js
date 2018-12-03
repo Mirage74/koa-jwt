@@ -26,7 +26,7 @@ app.use(bodyParser());
 
 app.use(passport.initialize()); // initialize passport first
 app.use(router.routes()); // then routes
-const server = app.listen(3000);// launch server on port  3000
+const server = app.listen(process.env.PORT || 3000);// launch server on port  3000
 
 
 //---------Use Schema and Module  ------------------//
