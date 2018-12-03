@@ -24,6 +24,30 @@ app.use(serve('public'));
 app.use(logger());
 app.use(bodyParser());
 
+
+
+app.use(async (ctx, next) => {
+  const origin = ctx.get('Origin');
+	console.log(ctx.method)
+  if (ctx.method !== 'OPTIONS') {
+    ctx.set('Access-Control-Allow-Origin', origin);
+    ctx.set('Access-Control-Allow-Credentials', 'true');
+  } else if (ctx.get('Access-Control-Request-Method')) {
+    ctx.set('Access-Control-Allow-Origin', origin);
+    ctx.set('Access-Control-Allow-Methods', ['GET', 'POST', 'DELETE', 'PUT', 'PATCH']);
+    ctx.set('Access-Control-Allow-Headers', 'Content-Type');
+    ctx.set('Access-Control-Max-Age', '42');
+    ctx.set('Access-Control-Allow-Credentials', 'true');
+    ctx.response.status = 200
+    console.log('ctx.response.status', ctx.response.status)	
+  }
+  await next();
+});
+
+
+
+
+
 app.use(passport.initialize()); // initialize passport first
 app.use(router.routes()); // then routes
 const server = app.listen(process.env.PORT || 3000);// launch server on port  3000
