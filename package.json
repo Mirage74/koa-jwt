@@ -1,0 +1,28 @@
+{
+  "name": "koa-jwt-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Balex <balexvicx@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jsonwebtoken": "^8.4.0",
+    "koa": "^2.6.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-passport": "^4.1.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "mongo-uri-builder": "^2.0.0",
+    "mongoose": "^5.3.13",
+    "mongoose-beautiful-unique-validation": "^7.1.1",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^2.1.1",
+    "socketio-jwt": "^4.5.0"
+  }
+}

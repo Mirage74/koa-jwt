@@ -1,0 +1,4 @@
+node_modules/
+src/libs/config-mango.js
+.idea/
+.eslintrc.json
