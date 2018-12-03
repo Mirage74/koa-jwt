@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_PATH=./handlers:./src node index.js"
   },
   "keywords": [],
   "author": "Balex <balexvicx@gmail.com>",
