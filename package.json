@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "NODE_PATH=./modules node src/index.js"
-  },
   "keywords": [],
   "author": "Balex <balexvicx@gmail.com>",
   "license": "MIT",
