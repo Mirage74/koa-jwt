@@ -1,11 +1,8 @@
 {
-  "name": "koa-jwt-2",
+  "name": "koa-jwt",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "NODE_PATH=./handlers:./modules node index.js"
-  },
   "keywords": [],
   "author": "Balex <balexvicx@gmail.com>",
   "license": "MIT",
