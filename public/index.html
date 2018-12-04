@@ -10,7 +10,41 @@
 </head>
 <body>
 <div>
-   REST
+    REST servis for JWT by Aliaksandr Babrouski
+</div>
+<br/>
+<div>
+    Create User in Mongo DB:
+    "POST" query to "https://koa-jwt.herokuapp.com/user"
+    with body:
+    {
+    "displayName": "John",
+    "email": "Doe@gmail.com",
+    "password": "123456"
+    }
+</div>
+<div>
+    Get a JWT:
+    "POST" query to "https://koa-jwt.herokuapp.com/login"
+    with body:
+    {
+    "email": "Doe@gmail.com",
+    "password": "123456"
+    }
+</div>
+
+
+<div>
+    Authentication  with JSW - key:
+    "GET" query to "https://koa-jwt.herokuapp.com/custom"
+
+    headers: {
+    'Authorization': 'JWT xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    }
+    if correct, you get "displayName"
+</div>
+
+
 </div>
 </body>
 </html>

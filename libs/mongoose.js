@@ -1,6 +1,6 @@
 const mongoUriBuilder = require('mongo-uri-builder')
 const mongoose = require('mongoose');
-const {DBUser, DBPass, DBhost, DBport, DBName} = require('./config-mango')
+const {DBUser, DBPass, DBhost, DBport, DBName} = require('./config-mongo')
 mongoose.Promise = Promise;
 
 const beautifyUnique = require('mongoose-beautiful-unique-validation');
