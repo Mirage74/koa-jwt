@@ -34,8 +34,8 @@ app.use(async (ctx, next) => {
     ctx.set('Access-Control-Allow-Credentials', 'true');
   } else if (ctx.get('Access-Control-Request-Method')) {
     ctx.set('Access-Control-Allow-Origin', origin);
-    ctx.set('Access-Control-Allow-Methods', ['GET', 'POST', 'DELETE', 'PUT', 'PATCH']);
-    ctx.set('Access-Control-Allow-Headers', 'Content-Type');
+    ctx.set('Access-Control-Allow-Methods', ['GET', 'POST', 'DELETE', 'PUT', 'PATCH', 'OPTIONS']);
+    ctx.set('Access-Control-Allow-Headers', ['Content-Type', 'Authorization', 'Access-Control-Allow-Headers', 'headers']);
     ctx.set('Access-Control-Max-Age', '42');
     ctx.set('Access-Control-Allow-Credentials', 'true');
     ctx.response.status = 200
@@ -50,7 +50,7 @@ app.use(async (ctx, next) => {
 
 app.use(passport.initialize()); // initialize passport first
 app.use(router.routes()); // then routes
-const server = app.listen(process.env.PORT || 3000);// launch server on port  3000
+const server = app.listen(process.env.PORT || 4000);// launch server on port  4000
 
 
 //---------Use Schema and Module  ------------------//
@@ -105,6 +105,10 @@ passport.use(new JwtStrategy(jwtOptions, function (payload, done) {
 //------------Routing---------------//
 
 // new user route
+
+
+
+
 
 router.post('/user', async(ctx, next) => {
   try {
